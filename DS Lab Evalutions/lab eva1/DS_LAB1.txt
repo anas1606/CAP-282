@@ -1,0 +1,56 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int a[50],n,i,j,t;
+clrscr();
+
+	cout<<"Enter The Array Size: ";
+	cin>>n;
+	//Reading Value From User
+	 for(i=0;i<n;i++)
+	 {
+	   cin>>a[i];
+	 }
+
+		//Deletion Of Even Number from Array
+		i=0;
+		while(i<n)
+		{
+		   if(a[i] % 2 == 0)
+		   {
+		     for(j=i;j<n-1;j++)
+		     {
+			a[j] =  a[j+1];
+		     }
+		     n=n-1;
+		   }
+		   else
+		   {
+		    i=i+1;
+		   }
+		}
+
+		 //shorting  of Array
+		 for(i=0;i<n;i++)
+		 {
+		    for(j=0;j<n-1;j++)
+		    {
+		       if(a[j]>a[j+1])
+		       {
+			 t = a[j];
+			 a[j] = a[j+1];
+			 a[j+1] = t;
+		       }
+		    }
+		 }
+
+		//Display
+		cout<<endl<<"AfteR ShortiinG: "<<endl;
+		for(i=0;i<n;i++)
+		{
+		  cout<<" "<<a[i];
+		}
+
+getch();
+}
