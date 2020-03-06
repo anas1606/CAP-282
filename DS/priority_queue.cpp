@@ -81,12 +81,6 @@ void del()
     {
         cout<<"UnderFlow";
     }
-    else if(head->link==NULL)
-    {
-        cout<<endl<<"deleted item is: "<<head->info<<endl;
-        free(head);
-        head=NULL;
-    }
     else
     {
         node *ptr=head;
