@@ -22,7 +22,7 @@ int main()
 	end=n;
 	mid=(strt+n)/2;
 	
-		while(strt<=end && a[mid]!=item)
+		while(strt<end && a[mid]!=item)
 		{
 			if(item>a[mid])
 			{
