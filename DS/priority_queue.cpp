@@ -17,7 +17,7 @@ void empty_lis()
     head=NULL;
 }
 
-void ins_p_q()
+void enqueue()
 {
     node *ptr,*loc,*temp;
     char item;
@@ -75,7 +75,7 @@ void traverse()
     }
 }
 
-void del()
+void dequeue()
 {
     if(head==NULL)
     {
@@ -98,20 +98,20 @@ int main()
 
         do
         {
-           cout<<endl<<"<1> Insertion "<<endl<<"<2> traverse"<<endl<<"<3> Deletion"<<endl;
+           cout<<endl<<"<1> Enqueue "<<endl<<"<2> traverse"<<endl<<"<3> Dequeue "<<endl;
            cout<<"Enter the choice: ";
            cin>>sw;
 
            switch(sw)
            {
            case 1:
-                    ins_p_q();
+                    enqueue();
                     break;
            case 2:
                     traverse();
                     break;
            case 3:
-                    del();
+                    dequeue();
                     break;
            default:
                     cout<<endl<<"Wrong Choice";
